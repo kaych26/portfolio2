@@ -20,7 +20,7 @@ const HomeTitleLink = styled(Link)`
   font-family: 'Fredericka the Great', cursive;
   font-size: 3.9em;
     
-  padding: 1.8em 0 .5em 0;
+  padding: 1.2em 0 .5em 0;
   letter-spacing: 0.2em;
   text-align: center;
   text-decoration: none;

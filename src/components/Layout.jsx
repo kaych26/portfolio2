@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import styled from 'styled-components';
-import Header from './Header';
+import Navbar from './Navbar';
 import Logo from './Logo';
 
 import Home from './Home';
@@ -29,17 +29,15 @@ const LayoutSection = styled.section`
 
   display: grid;
   grid-template-columns: 25% 50px auto 50px 25%;
-  /* grid-template-rows: 4rem auto 4rem 1rem; */
   grid-template-rows: 60px 1fr 50px;
   grid-template-areas:
   'logo logo header header header'
   'body body body body body'
   'leftarrow copyright copyright copyright  rightarrow'
-  
 `;
 
 const HeaderSection = styled.section`
-  overflow: hidden;
+  /* overflow: hidden; */
   padding-top: 2rem;
   grid-area: header;
   justify-self: end; 
@@ -115,7 +113,7 @@ export default function Layout(props) {
           path='/'
           render={route => (
             <>
-              <Header {...route} />
+              <Navbar {...route} />
             </>
           )}
         />
