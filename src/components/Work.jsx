@@ -14,7 +14,8 @@ import size from './size';
 const StyledWork = styled.section`
   animation: 2s ${keyframes`${slideInDown}`};
   overflow-x: hidden;
-  padding: 1.6em 2em 2em 1.2em;
+  padding: 0 2em;
+  /* padding: 1em 2em 2em 1.2em; */
 
   @media (max-width: ${size.tablet}) {
     padding: 0;
@@ -29,8 +30,8 @@ const StyledWork = styled.section`
 const ProjectTitle = styled.h1`
   font-size: 1.6em;
   text-align: center;
+  padding-bottom: 1em;
  
-  padding: .5em 0 1em 0;
   @media (max-width: ${size.tablet}) {
     padding: 0;
   }
