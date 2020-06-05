@@ -9,7 +9,7 @@ import size from './size';
 const ArrowFrame = styled.div``;
 
 const ArrowImg = styled.img`
-  width: 3.5rem;
+  width: 3.8rem;
 `;
 
 const ArrowLink = styled(Link)`

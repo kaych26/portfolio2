@@ -4,9 +4,12 @@ import styled from 'styled-components';
 import Header from './Header';
 import Logo from './Logo';
 
-import About from './About';
+import Home from './Home';
 import AboutMoi from './AboutMoi';
+import Work from './Work';
+import ResumeSummary from './ResumeSummary';
 import AboutPostit from './AboutPostit';
+
 import ArrowLeft from './ArrowLeft';
 import ArrowRight from './ArrowRight';
 import Copyright from './Copyright';
@@ -15,6 +18,7 @@ import heroImg from '../assets/BG_white_floor.png';
 const LayoutSection = styled.section`
   /* background */
   height: 100vh;
+  overflow: hidden;
   
   background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(192,192,192,0.6)), url(${heroImg});
   background-size: cover;
@@ -29,7 +33,7 @@ const LayoutSection = styled.section`
   grid-template-rows: 60px 1fr 50px;
   grid-template-areas:
   'logo logo header header header'
-  'postit body body body body'
+  'body body body body body'
   'leftarrow copyright copyright copyright  rightarrow'
   
 `;
@@ -39,9 +43,6 @@ const HeaderSection = styled.section`
   padding-top: 2rem;
   grid-area: header;
   justify-self: end; 
-  /* display: flex;
-  justify-content: flex-end;
-  align-items: center; */
   z-index: 99;
   
 `;
@@ -52,18 +53,45 @@ const LogoDiv = styled.div`
 `;
 
 const PostitDiv = styled.div`
-  grid-area: postit;
+  grid-area: body / 2 / 1 / 3 /2 ;
   padding-top: 13em;
+  overflow: hidden;
 `;
 
-const AboutSection = styled.section`
+const BodyHome = styled.section`
   grid-area: body;
   z-index: 10;
   overflow: hidden;
-  /* display: flex; */
-  padding: 0 2em;
+`;
+
+
+const BodyAbout = styled.section`
+  grid-area: 2 /2/ 3/ 6 ;
+
+  z-index: 10;
+  overflow: hidden;
+ 
+  padding: 0 1.8em;
+`;
+
+
+const BodyResume = styled.section`
+  grid-area: 2 /2/ 3/ 6 ;
+  z-index: 10;
+  overflow: hidden;
+
+  padding: 0 1.8em;
+ 
+`;
+
+const BodyWork = styled.section`
+  grid-area: 2 /1/ 3/ 6 ;
+  z-index: 10;
+  overflow: hidden;
 
 `;
+
+
 
 const ArrowLeftDiv = styled.div`
     grid-area: leftarrow;
@@ -89,15 +117,24 @@ export default function Layout(props) {
         <Route
           path='/'
           render={route => (
-            <Header {...route} />
+            <>
+              <Header {...route} />
+            </>
           )}
         />
       </HeaderSection>
 
-      <Route path='/about'>
+
+      <Route exact path='/'>
+        <BodyHome>
+          <Home />
+
+        </BodyHome>
+
+      </Route>
+      <Route exact path='/about'>
         <>
           <LogoDiv>
-
             <Logo />
           </LogoDiv>
 
@@ -105,14 +142,39 @@ export default function Layout(props) {
             <AboutPostit />
           </PostitDiv>
 
-          <AboutSection>
-            {/* <AboutPostit/> */}
+          <BodyAbout>
             <AboutMoi />
-          </AboutSection>
+          </BodyAbout>
         </>
       </Route>
 
-      {props.children}
+      <Route exact path='/work'>
+        <>
+          <LogoDiv>
+            <Logo />
+          </LogoDiv>
+          <BodyWork>
+            <Work />
+          </BodyWork>
+        </>
+      </Route>
+
+      <Route exact path='/resume'>
+        <>
+          <LogoDiv>
+            <Logo />
+          </LogoDiv>
+          <PostitDiv>
+            <AboutPostit />
+          </PostitDiv>
+          <BodyResume>
+            <ResumeSummary />
+          </BodyResume>
+        </>
+
+      </Route>
+
+      {/* {props.children} */}
 
 
       <Route

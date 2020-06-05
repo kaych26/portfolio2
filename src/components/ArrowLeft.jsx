@@ -6,7 +6,7 @@ import arrow_left_icon from '../assets/arrow_left.svg';
 import size from './size';
 
 const ArrowImg = styled.img`
-  width: 3.5rem;
+  width: 3.8rem;
 `;
 
 const ArrowLink = styled(Link)`
