@@ -56,7 +56,7 @@ const LogoDiv = styled.div`
 `;
 
 const PostitDiv = styled.div`
-  grid-area: 2 / 1 / 3 /2 ;
+  grid-area: 2 / 1 / 3 /3 ;
   padding-top: 13em;
   overflow: hidden;
 
