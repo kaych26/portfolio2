@@ -64,14 +64,13 @@ const BodyHome = styled.section`
   overflow: hidden;
 `;
 
-
 const BodyAbout = styled.section`
   grid-area: 2 /2/ 3/ 6 ;
 
   z-index: 10;
   overflow: hidden;
  
-  padding: 0 1.8em;
+  padding-right: 8em;
 `;
 
 
@@ -88,9 +87,7 @@ const BodyWork = styled.section`
   grid-area: 2 /1/ 3/ 6 ;
   z-index: 10;
   overflow: hidden;
-
 `;
-
 
 
 const ArrowLeftDiv = styled.div`

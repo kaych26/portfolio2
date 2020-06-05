@@ -9,8 +9,8 @@ import size from './size';
 
 const AboutMoiSection = styled.section`
   /* animation: 2s ${keyframes`${slideInDown}`}; */
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   /* background-image: linear-gradient(rgba(246, 244, 241, 0.3), rgba(205, 205, 203, 0.3)); */
   /* background-image: linear-gradient( rgba(205, 205, 203, .5)); */
 
@@ -22,7 +22,7 @@ const AboutMoiSection = styled.section`
 `;
 
 const HelloDiv = styled.div`
-  animation: 2s ${keyframes`${fadeIn}`};
+  /* animation: 2s ${keyframes`${fadeIn}`}; */
 `;
 
 const Hello = styled.h1`
@@ -60,56 +60,29 @@ const Title = styled.h1`
   }
 `;
 
-const AboutMeOuterDiv = styled.div`
-  /* height: 400px; */
-  /* display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 60px;
-  overflow: hidden; */
-
-  /* overflow: hidden; */
-  @media (max-width: ${size.mobile}) {
-    overflow: auto;
-}
+const AboutMeFirst = styled.div`
+  animation: 2s ${keyframes`${slideInRight}`};
 `;
 
-const AboutMeDiv = styled.div`
-animation: 1s ${keyframes`${slideInLeft}`};
-  font-size: .95em;
-  line-height: 1.3em;
-  padding: .4em 0;
-  
-  background-image: linear-gradient( rgba(205, 205, 203, .5));
-
-  @media (max-width: ${size.tablet}) {
-  
-
-  }
-  @media (max-width: ${size.mobile}) {
-    font-size: .9em;
-    line-height: 1.1em;
-  }
-
+const AboutMeSecond = styled.div`
+  animation: 2s ${keyframes`${slideInLeft}`};
 `;
+
 
 const AboutMe = styled.p`
-  animation: 1s ${keyframes`${slideInLeft}`};
+  background-image: linear-gradient( rgba(205, 205, 203, .5));
+  /* animation: 1s ${keyframes`${slideInLeft}`}; */
   font-size: .95em;
   line-height: 1.5em;
   padding: .5em 0;
 
   @media (max-width: ${size.tablet}) {
-  
 
   }
   @media (max-width: ${size.mobile}) {
     font-size: .9em;
     line-height: 1.1em;
   }
-`;
-const AboutMe2 = styled(AboutMe)`
-  animation: 1s ${keyframes`${slideInRight}`};
-  padding-bottom: 1em;
 `;
 
 const LinkResumeDiv = styled.div`
@@ -120,8 +93,13 @@ const LinkResumeDiv = styled.div`
   }
 `;
 
+const ScrollDiv = styled.div`
+  padding-top: 3em;
+`;
+
+
 const ScrollTo = styled.a`
-  animation: 4s ${keyframes`${flash}`};
+  /* animation: 4s ${keyframes`${flash}`}; */
   cursor: pointer;
   text-decoration: none;
   font-weight: bold;
@@ -129,9 +107,7 @@ const ScrollTo = styled.a`
   font-weight: 500;
   overflow: hidden;
   text-align: center;
-  padding-top: 3em;
 `;
-
 
 const Span = styled.span`
   color: #175be3;
@@ -164,53 +140,65 @@ export default function AboutMoi() {
       </HelloDiv>
 
 
-      {!isOpen && (
-        <>
-          <AboutMeDiv id="AboutPart1">
-            Self-driven professional with broad technical skill-sets and communication skills.
-          </AboutMeDiv>
+      <div id="First">
+        {!isOpen && (
+          <AboutMeFirst>
+            <AboutMe>
+              Self-driven professional with broad technical skill-sets and communication skills.
+          </AboutMe>
 
-          <AboutMeDiv>
-            Worked 10+ years for major financial companies as a Unix <Span>C/C+ </Span> programmer and manager of Market Data team. Solid experience in <Span> software development life cycle</Span> and financial application.
-          </AboutMeDiv>
+            <AboutMe>
+              Worked 10+ years for major financial companies as a Unix <Span>C/C+ </Span> programmer and manager of Market Data team. Solid experience in <Span> software development life cycle</Span> and financial application.
+          </AboutMe>
 
-          <AboutMeDiv>
-            After becoming a mom, developed passion in web development using <Span>React</Span>, <Span>JavaScript</Span>, <Span>MongoDB</Span> and <Span>Ruby on Rails</Span>. Gained inspirations by communicating and interacting with people.  Love using technology to transform innovative ideas into products. Super rewarding when a product delivers positive impact and outcomes to others.
-          </AboutMeDiv>
-        </>
-      )}
-
-      {isOpen && (
-        <>
-          <AboutMeDiv id="AboutPart2">
-            Developed core application to provide real-time <Span>Market Data</Span> to 24x7 institutional investors and online customers. Responsive and proactive in making preventative measures to ensure product <Span>stability</Span>.  Designed and implemented application for <Span>fault tolerance</Span> and <Span>high availability</Span>.
-          </AboutMeDiv>
-
-          <AboutMeDiv>
-            Hobbies include <Span>cooking</Span>, <Span>traveling</Span>, <Span>gardening</Span> and <Span>building construction</Span>. Most would agreed, travel and food are great energy boost for the mind and body.
-          </AboutMeDiv>
-
-          <AboutMeDiv>
-            Becoming a mom has brought many joy and challenges.  My daughter, Annie was a preemie baby.  Thanks to many professional guidance and supports, she is fully recovered and healthy!  This journey has taught me to stay open minded, reach out and connect.
-          </AboutMeDiv>
-        </>
-      )}
-
-
-      {!isOpen &&
-        (
-          <ScrollTo href="#AboutPart2" onClick={(e) => handleOpen(e)}>
-            MORE about me ...
-          </ScrollTo>
+            <AboutMe>
+              After becoming a mom, developed passion in web development using <Span>React</Span>, <Span>JavaScript</Span>, <Span>MongoDB</Span> and <Span>Ruby on Rails</Span>. Gained inspirations by communicating and interacting with people.  Love using technology to transform innovative ideas into products. Super rewarding when a product delivers positive impact and outcomes to others.
+          </AboutMe>
+          </AboutMeFirst>
         )}
+      </div>
 
-      {isOpen &&
-        (
-          <ScrollTo href="#AboutPart1" onClick={(e) => handleOpen(e)}>
-            PREVIOUS
-          </ScrollTo>
+      <div id="Second">
+        {isOpen && (
+          <AboutMeSecond>
+            <AboutMe>
+              Developed core application to provide real-time <Span>Market Data</Span> to 24x7 institutional investors and online customers. Responsive and proactive in making preventative measures to ensure product <Span>stability</Span>.  Designed and implemented application for <Span>fault tolerance</Span> and <Span>high availability</Span>.
+          </AboutMe>
+
+            <AboutMe>
+              Hobbies include <Span>cooking</Span>, <Span>traveling</Span>, <Span>gardening</Span> and <Span>building construction</Span>. Most would agreed, travel and food are great energy boost for the mind and body.
+          </AboutMe>
+
+            <AboutMe>
+              Becoming a mom has brought many joy and challenges.  My daughter, Annie was a preemie baby.  Thanks to many professional guidance and supports, she is fully recovered and healthy!  This journey has taught me to stay open minded, reach out and connect.
+          </AboutMe>
+          </AboutMeSecond>
         )}
+      </div>
 
-    </AboutMoiSection>
+      {
+        !isOpen &&
+        (
+
+          <ScrollDiv>
+            <ScrollTo href="#Second" onClick={(e) => handleOpen(e)}>
+              MORE about me ...
+          </ScrollTo>
+          </ScrollDiv>
+        )
+      }
+
+      {
+        isOpen &&
+        (
+          <ScrollDiv>
+            <ScrollTo href="#First" onClick={(e) => handleOpen(e)}>
+              PREVIOUS
+          </ScrollTo>
+          </ScrollDiv>
+        )
+      }
+
+    </AboutMoiSection >
   )
 }

@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import size from './size';
 
 const HeaderSection = styled.section`
+  padding: 0 5rem;
    /* overflow: hidden; */
 `;
 
