@@ -30,7 +30,7 @@ const Hello = styled.h1`
 
 const Name = styled.h1`
   color: #3a4140;
-  font-size: 3em;
+  font-size: 3.3em;
   font-weight: bold;
   padding: .5em 0;
 

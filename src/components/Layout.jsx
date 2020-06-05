@@ -60,9 +60,9 @@ const PostitDiv = styled.div`
   padding-top: 13em;
   overflow: hidden;
 
-@media (max-width: ${size.tablet}) {
+/* @media (max-width: ${size.tablet}) {
   grid-area: 2/ 1/ 3/ 3;
-}
+} */
 
   @media (max-width: ${size.mobile}) {
     display:none;
@@ -73,18 +73,21 @@ const BodyHome = styled.section`
   grid-area: body;
   z-index: 10;
   overflow: hidden;
+  @media (max-width: ${size.tablet}) {
+      padding-top: 3.8em;
+  }
 `;
 
 const BodyAbout = styled.section`
-  grid-area: 2 /2/ 3/ 6 ;
+  grid-area: 2 /3/ 3/ 6 ;
 
   z-index: 10;
   overflow: hidden;
-  padding-right: 8em;
+  padding-right: 6em;
+  align-self: center;
 
-  @media (max-width: ${size.tablet}) {
+  @media (max-width: ${size.tabletH}) {
     grid-area: 2/ 3/ 3/ 6;
-    align-self: center;
     padding: 0%;
   }
 
@@ -95,7 +98,7 @@ const BodyAbout = styled.section`
 `;
 
 const BodyResume = styled.section`
-  grid-area: 2 /2/ 3/ 6 ;
+  grid-area: 2 /3/ 3/ 6 ;
   z-index: 10;
   overflow: hidden;
   align-self: center;
@@ -103,8 +106,7 @@ const BodyResume = styled.section`
   padding: 0 1.8em;
 
   @media (max-width: ${size.tablet}) {
-    grid-area: 2/ 3/ 3/ 6;
-    /* padding: 3em .6em 0 0; */
+   
   }
   @media (max-width: ${size.mobile}) {
     grid-area: 2/ 1/ 3/ 6;
