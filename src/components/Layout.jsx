@@ -14,6 +14,7 @@ import ArrowLeft from './ArrowLeft';
 import ArrowRight from './ArrowRight';
 import Copyright from './Copyright';
 import heroImg from '../assets/BG_white_floor.png';
+import size from './size';
 
 const LayoutSection = styled.section`
   /* background */
@@ -34,6 +35,10 @@ const LayoutSection = styled.section`
   'logo logo header header header'
   'body body body body body'
   'leftarrow copyright copyright copyright  rightarrow'
+
+  /* @media (max-width: ${size.mobile}) {
+
+  } */
 `;
 
 const HeaderSection = styled.section`
@@ -51,9 +56,17 @@ const LogoDiv = styled.div`
 `;
 
 const PostitDiv = styled.div`
-  grid-area: body / 2 / 1 / 3 /2 ;
+  grid-area: 2 / 1 / 3 /2 ;
   padding-top: 13em;
   overflow: hidden;
+
+@media (max-width: ${size.tablet}) {
+  grid-area: 2/ 1/ 3/ 3;
+}
+
+  @media (max-width: ${size.mobile}) {
+    display:none;
+  }
 `;
 
 const BodyHome = styled.section`
@@ -67,17 +80,36 @@ const BodyAbout = styled.section`
 
   z-index: 10;
   overflow: hidden;
- 
   padding-right: 8em;
-`;
 
+  @media (max-width: ${size.tablet}) {
+    grid-area: 2/ 3/ 3/ 6;
+    align-self: center;
+    padding: 0%;
+  }
+
+  @media (max-width: ${size.mobile}) {
+    grid-area: 2/ 1/ 3/ 6;
+    padding: 0;
+  }
+`;
 
 const BodyResume = styled.section`
   grid-area: 2 /2/ 3/ 6 ;
   z-index: 10;
   overflow: hidden;
+  align-self: center;
 
   padding: 0 1.8em;
+
+  @media (max-width: ${size.tablet}) {
+    grid-area: 2/ 3/ 3/ 6;
+    /* padding: 3em .6em 0 0; */
+  }
+  @media (max-width: ${size.mobile}) {
+    grid-area: 2/ 1/ 3/ 6;
+    padding: 0 .6em;
+  }
  
 `;
 
@@ -85,8 +117,10 @@ const BodyWork = styled.section`
   grid-area: 2 /1/ 3/ 6 ;
   z-index: 10;
   overflow: hidden;
+  @media (max-width: ${size.tablet}) {
+    align-self: center;
+  }
 `;
-
 
 const ArrowLeftDiv = styled.div`
     grid-area: leftarrow;
@@ -166,11 +200,7 @@ export default function Layout(props) {
             <ResumeSummary />
           </BodyResume>
         </>
-
       </Route>
-
-      {/* {props.children} */}
-
 
       <Route
         path='/'
@@ -190,7 +220,6 @@ export default function Layout(props) {
           </>
         )}
       />
-
 
     </LayoutSection>
   )

@@ -19,7 +19,7 @@ const Navbar = (props) => {
   return (
     <Nav>
       {/* <NavBurger path={props.location.pathname} /> */}
-      <NavBurger />
+      <NavBurger path={props.location.pathname} />
     </Nav>
   )
 

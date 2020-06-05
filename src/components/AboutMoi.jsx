@@ -8,11 +8,6 @@ import { jello, flash, bounce, flipInY, rotateInDownRight, flip, fadeInRight, sl
 import size from './size';
 
 const AboutMoiSection = styled.section`
-  /* animation: 2s ${keyframes`${slideInDown}`}; */
-  /* display: flex;
-  flex-direction: column; */
-  /* background-image: linear-gradient(rgba(246, 244, 241, 0.3), rgba(205, 205, 203, 0.3)); */
-  /* background-image: linear-gradient( rgba(205, 205, 203, .5)); */
 
   font-family: 'Montserrat', sans-serif;
   letter-spacing: .03em;

@@ -3,12 +3,6 @@ import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
 import size from './size';
 
-
-const LogoFrame = styled.div`
- 
-
-`;
-
 const LogoKC = styled.h1`
   font-family: 'Fredericka the Great', cursive;
   color: #fff;
@@ -17,13 +11,16 @@ const LogoKC = styled.h1`
   letter-spacing: .01em;
   font-weight: 500;
   transform: rotate(-10deg);
+
+  @media (max-width: ${size.mobile}) {
+    display: none;
+      font-size: 18rem;
+  }
 `;
 
 export default function Logo() {
   return (
-    // <LogoFrame>
       <LogoKC>KC</LogoKC>
-    // </LogoFrame>
   )
 
 }

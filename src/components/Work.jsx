@@ -15,7 +15,6 @@ const StyledWork = styled.section`
   animation: 2s ${keyframes`${slideInDown}`};
   overflow-x: hidden;
   padding: 0 2em;
-  /* padding: 1em 2em 2em 1.2em; */
 
   @media (max-width: ${size.tablet}) {
     padding: 0;
@@ -33,7 +32,7 @@ const ProjectTitle = styled.h1`
   padding-bottom: 1em;
  
   @media (max-width: ${size.tablet}) {
-    padding: 0;
+    /* padding: 0; */
   }
 `;
 

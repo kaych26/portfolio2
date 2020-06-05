@@ -33,9 +33,6 @@ const NavLink = Styled(Link)`
   color: ${props => props.color};
   background-color: rgba(252, 251, 248, 0.8);
   border-radius: 2em;
-  /* z-index: 9999; */
-  /* display: flex; */
-  
 
   &:hover {
     border: 1px solid #ffa500;
@@ -48,23 +45,18 @@ const NavRight = (props) => {
   let about = '#000';
   let work = '#000';
   let resume = '#000'
-  let showLogo = '0';
-
+  
   if (props.path === '/') {
     home = '#ffa500';
-    showLogo = '0';
   }
   else if (props.path === '/about' && !isMobile) {
     about = '#ffa500';
-    showLogo = '1';
   }
   else if (props.path === '/work' && !isMobile) {
     work = '#ffa500';
-    showLogo = '1'
   }
   else if (props.path === '/resume' && !isMobile) {
     resume = '#ffa500';
-    showLogo = '1'
   }
 
   return (

@@ -21,7 +21,7 @@ const SummaryHeading = styled.h1`
   font-weight: 500;
 
   font-weight: 600;
-  padding: 0 0 .3em 0em;
+  padding: 0 0 .2em 0em;
 
   @media (max-width: ${size.tablet}) {
     padding: 0 0 .4em 0;
@@ -37,11 +37,11 @@ const SummarySubHeading = styled.h2`
 
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.2em;
-  padding-bottom: .4em;
+  padding-bottom: .5em;
   font-weight: 500;
  
   @media (max-width: ${size.mobile}) {
-    font-size: .9em;
+    font-size: .85em;
   }
 `;
 
@@ -59,7 +59,7 @@ const Skills = styled.p`
   line-height: 1.25em;
   font-size: .9em;
   @media (max-width: ${size.mobile}) {
-    font-size: .8em;
+    font-size: .78em;
     line-height: 1.1em;
   }
 `;
@@ -84,7 +84,7 @@ const DescOuterFrame = styled.div`
   padding: .1em 0;
 
   @media (max-width: ${size.mobile}) {
-    padding: 0;
+    padding: .15em 0;
   }
 `;
 
@@ -127,7 +127,7 @@ const Time = styled.h3`
   
   @media (max-width: ${size.mobile}) {
     font-size: .7em;
-    padding-right: .8em;
+    padding-right: 0;
   }
 `;
 
@@ -136,6 +136,7 @@ const Education = styled.h3`
   line-height: 1em;
   @media (max-width: ${size.mobile}) {
     font-size: .8em;
+    padding: .15em 0;
   }
 `;
 
@@ -167,9 +168,9 @@ export default function ResumeSummary() {
       <SummarySubHeading>
         Software Engineer | Web Developer | Finance Techology
       </SummarySubHeading>
-      <Summary>
+      {/* <Summary>
         I am a versatile Software Engineer who holds 10+ years experience working as a Senior Programmer and Manager for major financial corporations. Whether it be writing intricate code or managing cross-functional technology teams, I excel at breaking down complex information into simplistic and intuitive solutions.
-      </Summary>
+      </Summary> */}
 
       <Title>
         SKILLS
@@ -261,7 +262,8 @@ export default function ResumeSummary() {
       </Title>
       <CompanyFrame>
         <Education>
-          <Span>General Assembly</Span> | <Span2>Software Engineering Immersive</Span2>
+          <Span>General Assembly</Span> <br />
+          <Span2>Software Engineering Immersive</Span2>
         </Education>
 
         <Time>
@@ -271,7 +273,8 @@ export default function ResumeSummary() {
 
       <CompanyFrame>
         <Education>
-          <Span>New York University</Span> | <Span2>Bachelor of Arts in Computer Science</Span2>
+          <Span>New York University</Span> <br/>
+          <Span2>Bachelor of Arts in Computer Science</Span2>
         </Education>
 
         <Time>
@@ -281,7 +284,8 @@ export default function ResumeSummary() {
 
       <CompanyFrame>
         <Education>
-          <Span>AWS</Span> | <Span2>Certified AWS Solutions Architect Associate</Span2>
+          <Span>AWS</Span><br />
+          <Span2>Certified AWS Solutions Architect Associate</Span2>
         </Education>
 
         <Time>

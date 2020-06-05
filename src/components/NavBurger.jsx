@@ -43,7 +43,7 @@ const StyledBurger = Styled.div`
 
 `;
 
-const NavBurger = () => {
+const NavBurger = (props) => {
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -52,7 +52,7 @@ const NavBurger = () => {
         <div />
         <div />
       </StyledBurger>
-      <NavRight open={open} />
+      <NavRight open={open}  path={props.path} />
     </>
   )
 }
