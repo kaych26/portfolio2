@@ -52,7 +52,10 @@ const NavBurger = (props) => {
         <div />
         <div />
       </StyledBurger>
-      <NavRight open={open} path={props.path} />
+      <NavRight 
+        open={open} path={props.path}  
+        onClick={() => setOpen(!open)}>
+        </NavRight>
     </>
   )
 }

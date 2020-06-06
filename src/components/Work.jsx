@@ -87,7 +87,7 @@ export default function Work() {
 
   return (
     <StyledWork>
-      <ProjectTitle>PORTFOLIO</ProjectTitle>
+      <ProjectTitle>PROJECTS</ProjectTitle>
       <ProjectOuterFrame>
         <Skills />
         <ProjectDiv>

@@ -60,16 +60,17 @@ const NavRight = (props) => {
   {/* <NavLink to='/about' color={about} onClick={() => props.setOpen }> */}
   return (
     <NavbarFrame open={props.open}>
-      <NavLink to='/' color={home}>
+      <NavLink to='/' color={home} onClick={()=>props.onClick()} >
         Home
       </NavLink>
-      <NavLink to='/about' color={about} >
+      {/* <NavLink to='/about' color={about} > */}
+      <NavLink to='/about' color={about} onClick={()=>props.onClick()} >
         About
       </NavLink>
-      <NavLink to='/work' color={work}>
+      <NavLink to='/work' color={work} onClick={()=>props.onClick()} >
         Work
       </NavLink>
-      <NavLink to='/resume' color={resume}>
+      <NavLink to='/resume' color={resume} onClick={()=>props.onClick()} >
         Resume
       </NavLink>
     </NavbarFrame>
