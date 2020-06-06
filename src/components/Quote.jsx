@@ -50,7 +50,7 @@ export default function Quote() {
         "&nbsp;
       </ColorChar>
       <WordFrame>
-        <ColorChar color='#EBB214' rotate='-5deg'>
+        <ColorChar color='#f58105' rotate='-5deg'>
           I
         </ColorChar>
 

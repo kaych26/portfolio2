@@ -1,5 +1,5 @@
 const size = {
-  mobile: '414px',
+  mobile: '425px',
   mobileS: '320px',
   mobileM: '375px',
   mobileL: '425px',

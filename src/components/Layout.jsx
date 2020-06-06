@@ -136,6 +136,7 @@ const ArrowRightDiv = styled.div`
 
 const CopyrightDiv = styled.div`
   grid-area: copyright;
+  /* justify-self: center; */
   place-self: center;
 `;
 

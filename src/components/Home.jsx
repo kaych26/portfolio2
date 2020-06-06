@@ -35,11 +35,11 @@ const HomeTitleLink = styled(Link)`
 
 const HomeSubTitleFrame = styled.div`
   display: flex;
+
   @media (max-width: ${size.mobile}) {
     display: block;
     padding-bottom: 1.5em;
   }
-
 `;
 
 const SubTitleDivider = styled.h3`
@@ -48,13 +48,14 @@ const SubTitleDivider = styled.h3`
   }
 `;
 
-
 const HomeSubTitle = styled.h2`
   animation: ${props => props.time} ${keyframes`${zoomInRight}`};
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.3em;
   letter-spacing: 0.1em;
   padding-bottom: 1.5em;
+  text-align: center;
+  
   @media (max-width: ${size.mobile}) {
     font-size: 1em;
     padding-bottom: 0em;

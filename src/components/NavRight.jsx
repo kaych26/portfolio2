@@ -7,18 +7,13 @@ import size from './size';
 const NavbarFrame = Styled.div`
   display: flex;
   flex-flow: row nowrap;
-  /* justify-content: space-between; */
 
   @media (max-width: ${size.tablet}) {
     flex-flow: column nowrap;
-    /* background-color: #fff; */
     position: fixed;
     top: 0;
     right: 20px;
-    /* width: 200px; */
     padding-top: 5rem;
-    /* height: 100vh */
-     /* display: none; */
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
     transition: transform 0.3s ease-in-out;
   }
@@ -59,13 +54,16 @@ const NavRight = (props) => {
     resume = '#ffa500';
   }
 
+  debugger
+
+  {/* onClick={()=> setOpen(!open)} */}
+  {/* <NavLink to='/about' color={about} onClick={() => props.setOpen }> */}
   return (
     <NavbarFrame open={props.open}>
-
       <NavLink to='/' color={home}>
         Home
       </NavLink>
-      <NavLink to='/about' color={about}>
+      <NavLink to='/about' color={about} >
         About
       </NavLink>
       <NavLink to='/work' color={work}>
