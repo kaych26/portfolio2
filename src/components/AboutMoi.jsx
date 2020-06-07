@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
+
 // import * as Scroll from 'react-scroll';
 import { jello, flash, bounce, flipInY, rotateInDownRight, flip, fadeInRight, slideInUp, rotateIn, slideInDown, swing, zoomInDown, zoomIn, zoomInUp, slideIn, rotateInDownLeft, slideInLeft, slideInRight, fadeIn } from 'react-animations';
 
@@ -174,7 +175,6 @@ export default function AboutMoi() {
       {
         !isOpen &&
         (
-
           <ScrollDiv>
             <ScrollTo href="#Second" onClick={(e) => handleOpen(e)}>
               MORE about me ...

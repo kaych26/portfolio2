@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-// import ReactDOM from 'react-dom';
-// import Slider from 'react-styled-carousel';
+import ReactDOM from 'react-dom';
+import Slider from 'react-styled-carousel';
 import { slideInDown } from 'react-animations';
 
 import theRecipeBox_img from '../assets/screens/theRecipeBox.png';
@@ -13,7 +13,7 @@ import Skills from './Skills';
 import LinkGithub from './LinkGithub';
 import size from './size';
 
-const StyledWork = styled.section`
+const StyledShowWork = styled.section`
   animation: 2s ${keyframes`${slideInDown}`};
   overflow-x: hidden;
   padding: 0 2em;
@@ -28,7 +28,7 @@ const StyledWork = styled.section`
   }
 `;
 
-const ProjectTitle = styled.h1`
+const ProjTitle = styled.h1`
   font-size: 1.6em;
   text-align: center;
   padding-bottom: 1em;
@@ -38,7 +38,7 @@ const ProjectTitle = styled.h1`
   }
 `;
 
-const ProjectOuterFrame = styled.div`
+const ProjOuterFrame = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
@@ -51,21 +51,21 @@ const ProjectOuterFrame = styled.div`
   }
 `;
 
-const ProjectDiv = styled.div`
+const ProjDiv = styled.div`
   display: flex;
   justify-content: center;
 `;
 
-const ProjectImg = styled.img`
+const ProjImg = styled.img`
   width: 20em;
 `;
 
-const ProjectLink = styled.a`
+const ProjLink = styled.a`
   text-decoration: none;
   text-align: center;
 `;
 
-const ProjectDesc = styled.p`
+const ProjDesc = styled.p`
   /* width: 180px; */
   width: 370px;
   display: flex;
@@ -80,7 +80,7 @@ const ProjectDesc = styled.p`
   }
   `;
 
-export default function Work() {
+export default function ShowWork() {
   const theRecipeBox_link = 'https://therecipesbox.netlify.app/';
   const cathay22_link = 'https://cathay-22.netlify.app/';
   const supernovaGems_link = 'https://supernova-gems.netlify.app/';
@@ -88,69 +88,69 @@ export default function Work() {
   const superhero_link = 'http://bumpy-expert.surge.sh/';
 
   return (
-    <StyledWork>
-      <ProjectTitle>PROJECTS</ProjectTitle>
-      <ProjectOuterFrame>
+    <StyledShowWork>
+      <ProjTitle>PROJECTS</ProjTitle>
+      <ProjOuterFrame>
         <Skills />
-        <ProjectDiv>
+        <ProjDiv>
 
-          <ProjectLink href={theRecipeBox_link} target="_blank" rel="noopener noreferrer">
-            <ProjectImg src={theRecipeBox_img} alt="theRecipeBox" />
-            <ProjectDesc>
-              <LinkGithub link='https://github.com/kaych26/theRecipeBox' />
+          <ProjLink href={theRecipeBox_link} target="_blank" rel="noopener noreferrer">
+            <ProjImg src={theRecipeBox_img} alt="theRecipeBox" />
+            <ProjDesc>
+              <Linkhub link='https://github.com/kaych26/theRecipeBox' />
             theRecipeBox, a full CRUD app for users to connect by sharing recipes and cooking stories.  Developed in
             React, React Router & Ruby on Rails.
-          </ProjectDesc>
-          </ProjectLink>
-        </ProjectDiv>
+          </ProjDesc>
+          </ProjLink>
+        </ProjDiv>
 
-        <ProjectDiv>
+        <ProjDiv>
 
-          <ProjectLink href={cathay22_link} target="_blank" rel="noopener noreferrer">
-            <ProjectImg src={cathay22_img} alt="Cathay22" />
-            <ProjectDesc>
+          <ProjLink href={cathay22_link} target="_blank" rel="noopener noreferrer">
+            <ProjImg src={cathay22_img} alt="Cathay22" />
+            <ProjDesc>
               <LinkGithub link='https://github.com/CherelleTownes/cathay-22' />
             Cathay22, a React applicaton devloped with UX collaboration for a local Chinese restaurant.
-          </ProjectDesc>
-          </ProjectLink>
-        </ProjectDiv>
+          </ProjDesc>
+          </ProjLink>
+        </ProjDiv>
 
 
-        <ProjectDiv>
+        <ProjDiv>
 
-          <ProjectLink href={superhero_link} target="_blank" rel="noopener noreferrer">
-            <ProjectImg src={superhero_img} alt="superhero" />
-            <ProjectDesc>
+          <ProjLink href={superhero_link} target="_blank" rel="noopener noreferrer">
+            <ProjImg src={superhero_img} alt="superhero" />
+            <ProjDesc>
               <LinkGithub link='https://github.com/kaych26/Superheros' />
             Superhero, developed using HTML, CSS and Marvel API.
-          </ProjectDesc>
-          </ProjectLink>
-        </ProjectDiv>
+          </ProjDesc>
+          </ProjLink>
+        </ProjDiv>
 
-        <ProjectDiv>
+        <ProjDiv>
 
-          <ProjectLink href={supernovaGems_link} target="_blank" rel="noopener noreferrer">
-            <ProjectImg src={supernovaGems_img} alt="SupernovaGems" />
-            <ProjectDesc>
+          <ProjLink href={supernovaGems_link} target="_blank" rel="noopener noreferrer">
+            <ProjImg src={supernovaGems_img} alt="SupernovaGems" />
+            <ProjDesc>
               <LinkGithub link='https://github.com/Scott-PG/supernova-gems' />
   SuperNovaGems, a Fullstack ecommerce app developed in React and MongoDB.
-</ProjectDesc>
-          </ProjectLink>
-        </ProjectDiv>
+</ProjDesc>
+          </ProjLink>
+        </ProjDiv>
 
-        <ProjectDiv>
+        <ProjDiv>
 
-          <ProjectLink href={theWeatherGenie_link} target="_blank" rel="noopener noreferrer">
-            <ProjectImg
+          <ProjLink href={theWeatherGenie_link} target="_blank" rel="noopener noreferrer">
+            <ProjImg
               src={theWeatherGenie_img} alt="theWeatherGenie" />
-            <ProjectDesc>
+            <ProjDesc>
               <LinkGithub link='https://github.com/kaych26/theWeatherGenie' />
             theWeatherGenie, developed using React, JavaScript, CSS and Openweather API.
-          </ProjectDesc>
-          </ProjectLink>
-        </ProjectDiv>
+          </ProjDesc>
+          </ProjLink>
+        </ProjDiv>
 
-      </ProjectOuterFrame>
-    </StyledWork>
+      </ProjOuterFrame>
+    </StyledShowWork>
   );
 }
