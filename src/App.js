@@ -11,12 +11,12 @@ function initializeReactGA() {
 }
 
 function App() {
+  initializeReactGA();
   return (
     <>
-      <GlobalStyle/>
-      <Layout/>
+      <GlobalStyle />
+      <Layout />
     </>
-    
   );
 }
 export default App;
